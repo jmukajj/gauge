@@ -1,0 +1,49 @@
+{
+  "name": "GaugeChartWidget",
+  "id": "com.sap.sac.gaugeChart",
+  "description": "A custom widget displaying a gauge chart.",
+  "vendor": "JM",
+  "version": "1.0.0",
+  "icon": "data:image/png;base64,<base64-encoded-icon>",
+  "properties": {
+    "width": {
+      "type": "number",
+      "default": 400
+    },
+    "height": {
+      "type": "number",
+      "default": 300
+    },
+    "minValue": {
+      "type": "number",
+      "default": 0
+    },
+    "maxValue": {
+      "type": "number",
+      "default": 100
+    },
+    "currentValue": {
+      "type": "number",
+      "default": 50
+    }
+  },
+  "methods": {
+    "setCurrentValue": {
+      "description": "Updates the gauge's current value.",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "number"
+        }
+      ]
+    }
+  },
+  "dataBindings": {
+    "measures": {
+      "description": "Data binding for gauge chart values",
+      "feeds": ["currentValue"]
+    }
+  },
+  "webComponentTag": "com-sap-sac-gauge-chart",
+  "webComponentUrl": "https://yourdomain.com/gaugeChartWidget.js"
+}
