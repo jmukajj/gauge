@@ -45,5 +45,5 @@
     }
   },
   "webComponentTag": "com-sap-sac-gauge-chart",
-  "webComponentUrl": "https://yourdomain.com/gaugeChartWidget.js"
+  "webComponentUrl": "https://jmukajj.github.io/gauge/main.js"
 }
