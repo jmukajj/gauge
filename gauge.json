@@ -1,49 +1,58 @@
 {
-  "name": "GaugeChartWidget",
-  "id": "com.sap.sac.gaugeChart",
-  "description": "A custom widget displaying a gauge chart.",
+  "eula": "",
   "vendor": "JM",
-  "version": "1.0.0",
-  "icon": "data:image/png;base64,<base64-encoded-icon>",
+  "license": "",
+  "id": "com.sap.sac.jm",
+  "version": "1.2.0",
+  "name": "Widget",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAASklEQVR42mJkIAEwCkZXRFNkbFiA5X9AsjbQhwEgbQQpZFY9qEBCuSgC6kFoFXBikIgSiFqEKotWgFwBiYJQOiCeKTBbGQwaE5AJFgChdQQrW14gzAUPAKJEZ8KuzgXAAAAAElFTkSuQmCC",
+  "newInstancePrefix": "Widget",
+  "description": "Widget",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-sap-sac-jm",
+      "url": "https://jmukajj.github.io/gauge/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
   "properties": {
     "width": {
-      "type": "number",
-      "default": 400
+      "type": "integer",
+      "default": 600
     },
     "height": {
-      "type": "number",
-      "default": 300
-    },
-    "minValue": {
-      "type": "number",
-      "default": 0
-    },
-    "maxValue": {
-      "type": "number",
-      "default": 100
-    },
-    "currentValue": {
-      "type": "number",
-      "default": 50
+      "type": "integer",
+      "default": 420
     }
   },
   "methods": {
-    "setCurrentValue": {
-      "description": "Updates the gauge's current value.",
+    "sendPostData": {
+      "description": "Send POST Data",
       "parameters": [
         {
-          "name": "value",
-          "type": "number"
+          "name": "object",
+          "type": "Object<string>",
+          "description": "Post Data"
         }
       ]
     }
   },
   "dataBindings": {
-    "measures": {
-      "description": "Data binding for gauge chart values",
-      "feeds": ["currentValue"]
+    "dataBinding": {
+      "feeds": [
+        {
+          "id": "dimensions",
+          "description": "Dimensions",
+          "type": "dimension"
+        },
+        {
+          "id": "measures",
+          "description": "Measures",
+          "type": "mainStructureMember"
+        }
+      ]
     }
-  },
-  "webComponentTag": "com-sap-sac-gauge-chart",
-  "webComponentUrl": "https://jmukajj.github.io/gauge/main.js"
+  }
 }
