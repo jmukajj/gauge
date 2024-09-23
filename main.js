@@ -75,4 +75,4 @@ class GaugeChartWidget extends HTMLElement {
 }
 
 // Register the custom widget element
-customElements.define("com-sap-sac-gauge-chart", GaugeChartWidget);
+customElements.define("com-sap-sac-jm", GaugeChartWidget);
